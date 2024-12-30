@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskDetailViewController" customModule="Todo_CoreData" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSave" destination="AZM-8R-i3N" id="z98-V9-iuq"/>
+                <outlet property="txtTitle" destination="KDb-Pr-XU2" id="hbg-2e-eML"/>
+                <outlet property="txtTitleDescription" destination="gzg-ae-011" id="Dxh-YX-AAp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3f-VT-IgV">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDb-Pr-XU2">
+                            <rect key="frame" x="10" y="150" width="373" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="bs2-xP-oIW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gzg-ae-011">
+                            <rect key="frame" x="10" y="220" width="373" height="100"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="hT8-n6-k4o"/>
+                            </constraints>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZM-8R-i3N">
+                            <rect key="frame" x="166" y="370" width="61" height="50"/>
+                            <color key="backgroundColor" systemColor="tintColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="ETL-0Z-9ZJ"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Save">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="btnSaveTapped:" destination="-1" eventType="touchUpInside" id="cUQ-oo-FmM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="gzg-ae-011" secondAttribute="trailing" constant="10" id="PJh-hs-vMU"/>
+                        <constraint firstItem="gzg-ae-011" firstAttribute="top" secondItem="KDb-Pr-XU2" secondAttribute="bottom" constant="20" id="Wi5-7M-l5K"/>
+                        <constraint firstItem="gzg-ae-011" firstAttribute="leading" secondItem="S3f-VT-IgV" secondAttribute="leading" constant="10" id="fv1-wg-5ge"/>
+                        <constraint firstItem="KDb-Pr-XU2" firstAttribute="top" secondItem="S3f-VT-IgV" secondAttribute="top" constant="150" id="gEe-0I-2T5"/>
+                        <constraint firstItem="AZM-8R-i3N" firstAttribute="centerX" secondItem="S3f-VT-IgV" secondAttribute="centerX" id="i0I-Xp-3dy"/>
+                        <constraint firstItem="AZM-8R-i3N" firstAttribute="top" secondItem="gzg-ae-011" secondAttribute="bottom" constant="50" id="lN8-6a-dhb"/>
+                        <constraint firstItem="KDb-Pr-XU2" firstAttribute="leading" secondItem="S3f-VT-IgV" secondAttribute="leading" constant="10" id="wrF-HY-VmD"/>
+                        <constraint firstAttribute="trailing" secondItem="KDb-Pr-XU2" secondAttribute="trailing" constant="10" id="x9I-4B-lRI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="S3f-VT-IgV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="36n-L3-dDK"/>
+                <constraint firstItem="S3f-VT-IgV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gqb-Gi-E5X"/>
+                <constraint firstItem="S3f-VT-IgV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="R0q-vB-qyJ"/>
+                <constraint firstAttribute="bottom" secondItem="S3f-VT-IgV" secondAttribute="bottom" id="yzI-Zd-VEb"/>
+            </constraints>
+            <point key="canvasLocation" x="-16.030534351145036" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

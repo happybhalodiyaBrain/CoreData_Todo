@@ -1,0 +1,6 @@
+framework module Pods_Todo_CoreData {
+  umbrella header "Pods-Todo_CoreData-umbrella.h"
+
+  export *
+  module * { export * }
+}

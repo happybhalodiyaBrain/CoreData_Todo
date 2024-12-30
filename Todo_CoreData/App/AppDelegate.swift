@@ -1,12 +1,7 @@
-//
-//  AppDelegate.swift
-//  Todo_CoreData
-//
-//  Created by Happy  Bhalodiya on 27/12/24.
-//
-
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
+import IQKeyboardToolbarManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +10,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.isEnabled = true
+        IQKeyboardManager.shared.keyboardDistance = 20
+        IQKeyboardToolbarManager.shared.isEnabled = true
+        IQKeyboardManager.shared.resignOnTouchOutside = true
+        
         return true
     }
 
